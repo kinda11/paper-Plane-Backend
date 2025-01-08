@@ -45,12 +45,12 @@ app.post("/redeem_coins", async (req, res) => {
     const savedContact = await newContact.save();
     
     // Extract necessary fields from the saved contact
-    const { fullName, userEmail, totalCoins, remainingCoins } = savedContact;
+    const { fullName, userEmail, redeemed_Coins, remainingCoins } = savedContact;
 
     // Prepare email data
     const emailData = {
       fullName,
-      totalCoins,
+      redeemed_Coins,
       remainingCoins,
       redeemUrl: "https://redeem.paperplane.com/login",
     };

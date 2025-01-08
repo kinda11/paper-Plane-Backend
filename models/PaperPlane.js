@@ -35,7 +35,7 @@ const schema = new Schema(
       },
     },
     age: { type: Number },
-    totalCoins: { type: Number },
+    redeemed_Coins: { type: Number },
     remainingCoins: { type: Number },
     redeemed: { type: Boolean, default: false },
     isBanned: { type: Boolean, default: false },

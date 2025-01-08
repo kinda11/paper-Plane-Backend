@@ -34,7 +34,7 @@
             padding: 20px;
         }
         .content h1 {
-            color: #ffffff;
+            color: #000;
         }
         .button {
             display: inline-block;
@@ -52,6 +52,13 @@
             font-size: 14px;
             color: #666;
         }
+        .footer a {
+            color: #ff5e00;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -62,23 +69,27 @@
         </div>
         <div class="content">
             <p>Hi <strong><%= fullName %></strong>,</p>
-            <p>We hope you're enjoying your journey with <strong>Paper Plane Adventure</strong>!</p>
+            <p>Welcome to <strong>Paper Plane Adventure</strong>! We hope you're enjoying your journey with us.</p>
 
-            <p>You currently have:</p>
+            <p>Here is your current coin status:</p>
             <ul>
-                <li><strong>Total Coins:</strong> <%= totalCoins %></li>
+                <li><strong>Redeemed Coins:</strong> <%= redeemed_Coins %></li>
                 <li><strong>Remaining Coins:</strong> <%= remainingCoins %></li>
             </ul>
 
-            <p>Ready to redeem your coins? Click the button below to redeem now:</p>
+            <p>If you have any questions or encounter any issues, feel free to reach out to us at <a href="mailto:inquiry.paperplane@gmail.com">inquiry.paperplane@gmail.com</a>.</p>
 
-            <a href="<%= redeemUrl %>" class="button">Redeem Your Coins</a>
+            <!-- <a href="<%= redeemUrl %>" class="button">Redeem Your Coins</a> -->
 
-            <p>Thank you for being a part of the adventure!</p>
-            <p>The Paper Plane Adventure Team</p>
+            <p>Thank you for being a valued part of the Paper Plane Adventure community!</p>
+            <p>Best regards,<br>The Paper Plane Adventure Team</p>
         </div>
         <div class="footer">
-            &copy; <%= new Date().getFullYear() %> Paper Plane Adventure. All rights reserved.
+            <p>&copy; <%= new Date().getFullYear() %> Paper Plane Adventure. All rights reserved.</p>
+            <p>
+                <a href="https://www.paperplaneadventure.com/privacy-policy.html" target="_blank">Privacy Policy</a> | 
+                <a href="https://www.paperplaneadventure.com/terms.html" target="_blank">Terms and Conditions</a>
+            </p>
         </div>
     </div>
 </body>
