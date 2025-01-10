@@ -77,7 +77,7 @@ app.post("/redeem_coins", async (req, res) => {
 
 
 // Read all contacts with pagination
-app.get("/contacts", async (req, res) => {
+app.get("/redeemed/all", async (req, res) => {
   try {
     const { page, limit } = req.query;
     const options = {
